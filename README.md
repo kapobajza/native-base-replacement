@@ -8,8 +8,8 @@ The main similarity is with the utility props which Native base uses. The utilit
 
 If you want to use this implementation, but with some of your additions, the most important files for you to focus on are:
 
-- All of the files in the `src/styled/props` folder
-- And the styled HoC: `src/styled/styled`
+- All of the files in the [`src/styled/props`](https://github.com/kapobajza/native-base-replacement/blob/d0f7f09c2100d5967f7331b5f1ea06c0ff5ebc19/src/styled/props) folder
+- And the styled HoC: [`src/styled/styled`](https://github.com/kapobajza/native-base-replacement/blob/d0f7f09c2100d5967f7331b5f1ea06c0ff5ebc19/src/styled/styled.ts#L11-L475)
 
 Feel free to fork, c/p or do whatever you want with this repo.
 
