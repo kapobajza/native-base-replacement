@@ -14,3 +14,24 @@ If you want to use this implementation, but with some of your additions, the mos
 Feel free to fork, c/p or do whatever you want with this repo.
 
 Happy coding!
+
+## Usage
+
+If you want your component to have access to the [utility props](https://github.com/kapobajza/native-base-replacement/blob/d0f7f09c2100d5967f7331b5f1ea06c0ff5ebc19/src/styled/styled.ts#L22-L147) (like `margin`, `padding`, `flex`, etc.), you should wrap them in the [`src/styled/styled`](https://github.com/kapobajza/native-base-replacement/blob/d0f7f09c2100d5967f7331b5f1ea06c0ff5ebc19/src/styled/styled.ts#L11-L475) HoC.
+
+```typescript
+import { TouchableWithoutFeedback } from 'react-native';
+import { styled } from '~/styled';
+
+const StyledTouchableWithoutFeedback = styled(TouchableWithoutFeedback);
+
+const MyComponent = () => (
+  /* StyledTouchableWithoutFeedback will now have access to all of the utility props */
+  <StyledTouchableWithoutFeedback
+    margin="4" // Equal to 16, because 4x4 = 16
+    padding="3" // Equal to 12, because 3x4 = 12
+    flex={1}
+    backgroundColor="primary.100"
+  />
+);
+```
