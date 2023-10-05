@@ -19,6 +19,17 @@ Happy coding!
 
 If you want your component to have access to the [utility props](https://github.com/kapobajza/native-base-replacement/blob/d0f7f09c2100d5967f7331b5f1ea06c0ff5ebc19/src/styled/styled.ts#L22-L147) (like `margin`, `padding`, `flex`, etc.), you should wrap them in the [`src/styled/styled`](https://github.com/kapobajza/native-base-replacement/blob/d0f7f09c2100d5967f7331b5f1ea06c0ff5ebc19/src/styled/styled.ts#L11-L475) HoC.
 
+But first you will have to wrap your whole app component with the `ThemeProvider`
+
+```typescript
+import { ThemeProvider } from '~/theme';
+
+// And then in the file where you have your providers for the whole app
+<ThemeProvider>
+  <App />
+</ThemeProvider>
+```
+
 ```typescript
 import { TouchableWithoutFeedback } from 'react-native';
 import { styled } from '~/styled';
