@@ -30,6 +30,8 @@ import { ThemeProvider } from '~/theme';
 </ThemeProvider>
 ```
 
+And then you can use the `styled` HoC:
+
 ```typescript
 import { TouchableWithoutFeedback } from 'react-native';
 import { styled } from '~/styled';
